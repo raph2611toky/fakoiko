@@ -138,6 +138,7 @@ export default function Home() {
       {/* Services Section */}
       <section className="services-section">
         <h2>{texts.services}</h2>
+        <p>{language === 'fr' ? 'Découvrez nos solutions innovantes pour la gestion optimale des déchets' : 'Tuklasin ang aming makabagong solusyon para sa wastong pamamahala ng ônja'}</p>
         <div className="services-grid">
           {services.map((service, i) => (
             <div key={i} className="service-card">
@@ -152,6 +153,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="features-section">
         <h2>{texts.features}</h2>
+        <p>{language === 'fr' ? 'Bénéficiez d\'une plateforme puissante et facile à utiliser au quotidien' : 'Tamasahin ang isang malakas at madaling gamitin na platform araw-araw'}</p>
         <div className="features-grid">
           {features.map((feature, i) => (
             <div key={i} className="feature-item">
@@ -165,6 +167,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="testimonials-section">
         <h2>{texts.testimonials}</h2>
+        <p>{language === 'fr' ? 'Nos utilisateurs vous racontent leur expérience avec EcoLink' : 'Ang aming mga user ay nagsasalaysay ng kanilang karanasan sa EcoLink'}</p>
         <div className="testimonials-grid">
           {testimonials.map((testimonial, i) => (
             <div key={i} className="testimonial-card">
@@ -180,6 +183,7 @@ export default function Home() {
       {/* Team Section */}
       <section className="team-section">
         <h2>{texts.team}</h2>
+        <p>{language === 'fr' ? 'Rencontrez les experts passionnés derrière EcoLink' : 'Kilalanin ang mga eksperto na nasa likod ng EcoLink'}</p>
         <div className="team-grid">
           {team.map((member, i) => (
             <div key={i} className="team-member">
@@ -194,66 +198,71 @@ export default function Home() {
       {/* Contact Section */}
       <section className="contact-section">
         <h2>{texts.contact}</h2>
-        <form onSubmit={handleContactSubmit} className="contact-form">
-          <input
-            type="text"
-            name="name"
-            placeholder={language === 'fr' ? 'Votre nom' : 'Inyong pangalan'}
-            value={contactForm.name}
-            onChange={handleContactChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder={language === 'fr' ? 'Votre email' : 'Inyong email'}
-            value={contactForm.email}
-            onChange={handleContactChange}
-            required
-          />
-          <textarea
-            name="message"
-            placeholder={language === 'fr' ? 'Votre message' : 'Inyong mensahe'}
-            value={contactForm.message}
-            onChange={handleContactChange}
-            required
-            rows="5"
-          ></textarea>
-          <Button type="submit">
-            {language === 'fr' ? 'Envoyer' : 'Ipadala'}
-          </Button>
-        </form>
-      </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h4>EcoLink</h4>
-            <p>{language === 'fr' ? 'Révolutionner la gestion des déchets' : 'Ovay ang palapalit'}</p>
-          </div>
-          <div className="footer-section">
-            <h4>{language === 'fr' ? 'Liens rapides' : 'Mabilis na links'}</h4>
-            <ul>
-              <li><a href="#home">{language === 'fr' ? 'Accueil' : 'Tahanan'}</a></li>
-              <li><a href="#about">{language === 'fr' ? 'À propos' : 'Tungkol'}</a></li>
-              <li><a href="#services">{language === 'fr' ? 'Services' : 'Serbisyo'}</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4>{language === 'fr' ? 'Réseaux sociaux' : 'Social media'}</h4>
-            <div className="social-links">
-              <a href="#facebook" title="Facebook">f</a>
-              <a href="#twitter" title="Twitter">𝕏</a>
-              <a href="#linkedin" title="LinkedIn">in</a>
-              <a href="#whatsapp" title="WhatsApp">W</a>
+        <p>{language === 'fr' ? 'Nous serions heureux de vous aider. Contactez-nous dès maintenant.' : 'Kami ay handang tumulong. Makipag-ugnayan sa amin ngayon.'}</p>
+        
+        <div className="contact-wrapper">
+          <div className="contact-info">
+            <div className="info-item">
+              <span className="info-icon">📍</span>
+              <div className="info-content">
+                <h4>{language === 'fr' ? 'Adresse' : 'Address'}</h4>
+                <p>123 Rue de l'Écologie<br/>75001 Paris, France</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <span className="info-icon">📞</span>
+              <div className="info-content">
+                <h4>{language === 'fr' ? 'Téléphone' : 'Phone'}</h4>
+                <p>+33 (0) 1 23 45 67 89</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <span className="info-icon">✉️</span>
+              <div className="info-content">
+                <h4>{language === 'fr' ? 'Email' : 'Email'}</h4>
+                <p>contact@ecolink.fr<br/>support@ecolink.fr</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <span className="info-icon">🕐</span>
+              <div className="info-content">
+                <h4>{language === 'fr' ? 'Horaires' : 'Hours'}</h4>
+                <p>{language === 'fr' ? 'Lun-Ven: 9h-18h' : 'Mon-Fri: 9am-6pm'}<br/>{language === 'fr' ? 'Sam: 10h-14h' : 'Sat: 10am-2pm'}</p>
+              </div>
             </div>
           </div>
+
+          <form onSubmit={handleContactSubmit} className="contact-form">
+            <input
+              type="text"
+              name="name"
+              placeholder={language === 'fr' ? 'Votre nom complet' : 'Your full name'}
+              value={contactForm.name}
+              onChange={handleContactChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder={language === 'fr' ? 'votre@email.com' : 'your@email.com'}
+              value={contactForm.email}
+              onChange={handleContactChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder={language === 'fr' ? 'Votre message...' : 'Your message...'}
+              value={contactForm.message}
+              onChange={handleContactChange}
+              required
+              rows="5"
+            ></textarea>
+            <Button type="submit" style={{ marginTop: '0.5rem' }}>
+              {language === 'fr' ? 'Envoyer mon message' : 'Send message'}
+            </Button>
+          </form>
         </div>
-        <div className="footer-bottom">
-          <p>&copy; 2025 EcoLink. {language === 'fr' ? 'Tous droits réservés.' : 'Lahat ng karapatan ay nakalaan.'}</p>
-        </div>
-      </footer>
+      </section>
     </div>
   );
 }
