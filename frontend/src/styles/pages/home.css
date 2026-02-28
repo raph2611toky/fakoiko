@@ -15,7 +15,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #faf5ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 40%, #f0f9ff 100%);
   padding: 5rem 10% 3rem;
 }
 
@@ -91,31 +91,68 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--color-text);
-  margin: 0 0 1rem;
-  line-height: 1.1;
-  letter-spacing: -1px;
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #0f172a 0%, #0d9488 50%, #1e293b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  text-balance: balance;
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  color: var(--color-text-secondary);
-  margin: 0 0 2rem;
-  line-height: 1.6;
+  font-size: 1.4rem;
+  color: #475569;
+  margin: 0 0 2.5rem;
+  line-height: 1.7;
   font-weight: 500;
+  text-balance: balance;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .hero-buttons button {
-  min-width: 160px;
+  min-width: 180px;
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 0.875rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-buttons button:first-child {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0d9488 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 10px 25px rgba(13, 148, 136, 0.35);
+}
+
+.hero-buttons button:first-child:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(13, 148, 136, 0.5);
+}
+
+.hero-buttons button:last-child {
+  background: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.hero-buttons button:last-child:hover {
+  transform: translateY(-4px);
+  background: rgba(13, 148, 136, 0.05);
+  box-shadow: 0 10px 25px rgba(13, 148, 136, 0.2);
 }
 
 /* Services Section */
