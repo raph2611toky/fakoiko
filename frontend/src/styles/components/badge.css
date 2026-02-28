@@ -1,0 +1,78 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+}
+
+/* Default Badge */
+.badge-default {
+  background-color: var(--color-surface-variant);
+  color: var(--color-text);
+}
+
+/* Primary Badge */
+.badge-primary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+/* Secondary Badge */
+.badge-secondary {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+}
+
+/* Success Badge */
+.badge-success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Warning Badge */
+.badge-warning {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* Error Badge */
+.badge-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Info Badge */
+.badge-info {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+}
+
+/* Solid variants */
+.badge-primary-solid {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.badge-secondary-solid {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.badge-success-solid {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.badge-warning-solid {
+  background-color: var(--color-warning);
+  color: white;
+}
+
+.badge-error-solid {
+  background-color: var(--color-error);
+  color: white;
+}

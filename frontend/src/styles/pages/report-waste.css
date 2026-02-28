@@ -1,0 +1,112 @@
+.report-waste-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.page-header {
+  text-align: center;
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.page-header p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+}
+
+.report-content {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.report-card {
+  width: 100%;
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.file-input {
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  font-weight: 600;
+}
+
+.file-input:hover .file-input-label {
+  background-color: var(--color-primary-dark);
+}
+
+.report-info {
+  background-color: var(--color-primary-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.report-info h3 {
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-primary-dark);
+}
+
+.report-info ul {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+}
+
+.report-info li {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .report-content {
+    max-width: 100%;
+  }
+
+  .page-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .report-content {
+    padding: 0 var(--spacing-md);
+  }
+
+  .page-header {
+    padding: 0 var(--spacing-md) var(--spacing-lg);
+  }
+}
